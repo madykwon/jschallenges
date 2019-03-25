@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 5</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+        background-size: 388px 325px;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+        function upDate(previewPic){
+            var src = previewPic.getAttribute( "src" );
+            var alt = previewPic.getAttribute( "alt" );
+            var background = document.getElementById("image");
+
+            background.style.backgroundImage = "url('" + src + "')";
+            background.innerHTML = alt;
+        }
+
+        function unDo(){
+            var background = document.getElementById("image");
+            background.style.backgroundImage = "url('')";
+            background.style.backgroundColor = "#8e68ff";
+            background.innerHTML = "Hover or tab over/into an image below."
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 5</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" 
+            alt = "Rainy Road" 
+            src = "1.jpg" tabindex="0"; onfocus="upDate(this)"; onblur="unDo()"; onmouseover="upDate(this)" onmouseleave="unDo()";>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
+        <img class = "preview" 
+            alt = "Night Sky" 
+            src = "2.jpg" tabindex="0"; onfocus="upDate(this)"; onblur="unDo()"; onmouseover="upDate(this)" onmouseleave="unDo()";>
+    
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" 
+            alt = "Starry Lake"
+            src = "3.jpg" tabindex="0"; onfocus="upDate(this)"; onblur="unDo()"; onmouseover="upDate(this)" onmouseleave="unDo()";>
+            
+
+        <img class = "preview" 
+            alt = "Waterfall" 
+            src = "4.jpg" tabindex="0"; onfocus="upDate(this)"; onblur="unDo()"; onmouseover="upDate(this)" onmouseleave="unDo()";>
+
+        <img class = "preview" 
+            alt = "Yosemite" 
+            src = "5.jpg" tabindex="0"; onfocus="upDate(this)"; onblur="unDo()"; onmouseover="upDate(this)" onmouseleave="unDo()";>
+
+        <img class = "preview" 
+            alt = "Galaxy" 
+            src = "6.jpg" tabindex="0"; onfocus="upDate(this)"; onblur="unDo()"; onmouseover="upDate(this)" onmouseleave="unDo()";>
+</body>
+</html>
+    
